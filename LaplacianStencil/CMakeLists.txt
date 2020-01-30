@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 find_package(OpenMP REQUIRED)
 
-file(GLOB subdirs RELATIVE ${PROJECT_SOURCE_DIR} LaplacianStencil_*)
+file(GLOB subdirs RELATIVE ${PROJECT_SOURCE_DIR} CONFIGURE_DEPENDS LaplacianStencil_*)
 
 foreach(subdir ${subdirs})
     add_executable(${subdir} ${subdir}/Laplacian.cpp ${subdir}/main.cpp)
